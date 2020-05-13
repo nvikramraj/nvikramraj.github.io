@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "N.Vikram Raj"
-  avatar           : "/images/2.jpg"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/2.jpg"
   bio              : "Welcome to my Page !"
   location         : "Chennai , TN"
   email            : "nvikramraj1305@gmail.com"
