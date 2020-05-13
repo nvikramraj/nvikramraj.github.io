@@ -7,6 +7,7 @@ header:
 	image: "/images/6.jpg"
 
 ---
+
 {% include base_path %}
 {% include group-by-array collection=site.post field="tags" %}
 
