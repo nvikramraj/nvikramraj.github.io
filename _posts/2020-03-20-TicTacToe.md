@@ -1,7 +1,7 @@
 ---
 title: "Python Project : Tic Tac Toe Game"
 date: 2020-03-20
-tags: [Python,Game]
+tags: [Python]
 excerpt: "A fun 2 player game made using python basics"
 ---
 
@@ -13,8 +13,12 @@ This game is coded using only the basics of Python and a little bit of an extens
 * [Python](https://www.python.org/)
 * [Python Extension - Colorama](https://pypi.org/project/colorama/)
 
-**View full code** [here](https://github.com/nvikramraj/TicTacToe)
+**Download/Clone full code** [here](https://github.com/nvikramraj/TicTacToe)
 
-Code explanation to be added soon ...
+```python
+
+	print("Code explanation to be added soon")
+
+```
 
 **For a more detailed explanation click** [here](https://www.youtube.com/watch?v=eXBD2bB9-RA&list=PLQVvvaa0QuDeAams7fkdcwOGBpGdHpXln)
