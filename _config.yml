@@ -94,8 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "N.Vikram Raj"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I'm a student pursuing ECE but likes to code on the side."
+  avatar           : "/images/2.jpg"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Welcome to my Page !"
   location         : "Chennai , TN"
   email            : "nvikramraj1305@gmail.com"
   links:
