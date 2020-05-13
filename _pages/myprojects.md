@@ -6,7 +6,6 @@ title: "My Projects"
 author_profile: true
 header:
   image: "/images/3.jpg"
-  height : 50%
 
 ---
 
