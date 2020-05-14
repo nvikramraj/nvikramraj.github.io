@@ -26,7 +26,8 @@ This game is coded using only the basics of Python and a little bit of an extens
 
 ```python
 
-	import itertools #This is used to switch players after each round.(inbuilt function no need to download)
+	import itertools 
+	#This is used to switch players after each round.(inbuilt function no need to download)
 	from colorama import Fore, Back, Style,init
 	init() #initalizes colorama
 
@@ -38,8 +39,8 @@ This is the code used to get the size of the game map.
 
 ```python
 
-	game_size = int(input("What size (size > 1) game of Tic Tac Toe ? ")) 
-	# since we are creating n*n size game map , we ask the user for n
+    game_size = int(input("What size (size > 1) game of Tic Tac Toe ? ")) 
+    # since we are creating n*n size game map , we ask the user for n
     game=[[0 for _ in range(game_size)]for _ in range(game_size)]  
     # creates a n*n array as the game map and gives 0 as default value
     game, _=game_board(game,just_display=True)
@@ -50,9 +51,9 @@ The game map is made as a function because it will be called multiple times . In
 1. To just display the game map (if just_display = True)
 2. To change the values in the game map (if just_display = False)
 
-**Game board :**
+Game board :
 
-<img src="{{ site.url }}{{ site.baseurl  }}/images/TicTacToe/1.jpg" alt="Game board">
+<img src="/images/TicTacToe/1.jpg" alt="">
 
 From the above image you can see that we need some mapping in the game board on the top and size . I have used numbers for mapping because it's easier for the user to interact with.
 
