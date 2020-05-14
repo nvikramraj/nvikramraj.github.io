@@ -17,19 +17,19 @@ This game is coded using only the basics of Python and a little bit of an extens
 
 ## To make the game we need to code up a few things :
 * The game board
-* Getting inputs from the user
 * Choosing the winner
-* Highlighting the winner 
+* Highlighting the winner
+* Getting inputs from the user 
 
 
 **Stuff to import before coding**
 
 ```python
 
-	import itertools 
-	#This is used to switch players after each round.(inbuilt function no need to download)
-	from colorama import Fore, Back, Style,init
-	init() #initalizes colorama
+import itertools 
+#This is used to switch players after each round.(inbuilt function no need to download)
+from colorama import Fore, Back, Style,init
+init() #initalizes colorama
 
 ```
 
@@ -39,12 +39,12 @@ This is the code used to get the size of the game map.
 
 ```python
 
-    game_size = int(input("What size (size > 1) game of Tic Tac Toe ? ")) 
-    # since we are creating n*n size game map , we ask the user for n
-    game=[[0 for _ in range(game_size)]for _ in range(game_size)]  
-    # creates a n*n array as the game map and gives 0 as default value
-    game, _=game_board(game,just_display=True)
-    # passes the array to an UDF , to just display the game board
+game_size = int(input("What size (size > 1) game of Tic Tac Toe ? ")) 
+# since we are creating n*n size game map , we ask the user for n
+game=[[0 for _ in range(game_size)]for _ in range(game_size)]  
+# creates a n*n array as the game map and gives 0 as default value
+game, _=game_board(game,just_display=True)
+# passes the array to an UDF , to just display the game board
 
 ```
 The game map is made as a function because it will be called multiple times . In the game map there are two options :
@@ -53,7 +53,7 @@ The game map is made as a function because it will be called multiple times . In
 
 Game board :
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/TicTacToe/1.jpg" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/1.jpg" alt="">
 
 From the above image you can see that we need some mapping in the game board on the top and size . I have used numbers for mapping because it's easier for the user to interact with.
 
@@ -64,7 +64,7 @@ A global variable draw is added , It is a draw if there are no empty spaces on t
  
 ```python
 
-	def game_board(game_map,player=0,row=0,column=0,just_display=False):
+def game_board(game_map,player=0,row=0,column=0,just_display=False):
 
 	global draw # this used to check if they draw a match
 		
@@ -82,7 +82,7 @@ A global variable draw is added , It is a draw if there are no empty spaces on t
             game_map[row][column] = player
             # To display the game board if just_display is true
 
-        draw = 0
+        draw =  0 # to count the number of 0s on the board before every round
 
         for count,row in enumerate(game):  # used to change 1 to X and 2 to O and insert colours 
             colored_row=""
@@ -121,6 +121,45 @@ A global variable draw is added , It is a draw if there are no empty spaces on t
 
 We need to get the game size , the index/place on the map they want to play at.
 We also need to change the player's turn after each round. (This is done using itertools.cycle and next() an inbuilt function )
+
+```python
+
+play = True
+player_1 = 0
+player_2 = 0
+draw = 0
+print("Welcome to Tic Tac Toe")
+
+while play:
+    print("\nNew Game")
+    game_size = int(input("What size (size > 1) game of Tic Tac Toe ? "))  
+    game=[[0 for _ in range(game_size)]for _ in range(game_size)]  # creates a game map for the given size 
+    game_won=False
+    game, _=game_board(game,just_display=True)
+    players = itertools.cycle([1,2])  # used to cycle between 2 elements in the list
+ 
+    while not game_won:
+        current_player = next(players)
+        print(f"\nCurrent Player: {current_player}")
+        played=False
+
+        while not played:
+            column_choice = int(input("What column do you want to play? ( 0 , 1 , 2 ) : "))
+            row_choice = int(input("What row do you want to play? ( 0 , 1 , 2 ) : "))
+            game,played = game_board(game, current_player,row_choice,column_choice)
+        
+        if draw == 0:
+            print("\nDraw")
+            game_won=True
+        else:
+            game_won=win(game)
+
+    print(f"\nScores , Player 1 : {player_1} , Player 2 : {player_2} ")
+    next_game = input("Do you want to play another match (y/n) : ") 
+    play = True if next_game.lower() == "y" else False
+print("Byeeeeeeee")
+
+```
 
 
 **For a more detailed explanation click** [here](https://www.youtube.com/watch?v=eXBD2bB9-RA&list=PLQVvvaa0QuDeAams7fkdcwOGBpGdHpXln)
