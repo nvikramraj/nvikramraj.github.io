@@ -53,7 +53,7 @@ The game map is made as a function because it will be called multiple times . In
 
 Game board :
 
-<img src="/images/TicTacToe/1.jpg" alt="">
+![alt]({{ site.url }}{{  site.baseurl  }}/images/TicTacToe/1.jpg)
 
 From the above image you can see that we need some mapping in the game board on the top and size . I have used numbers for mapping because it's easier for the user to interact with.
 
