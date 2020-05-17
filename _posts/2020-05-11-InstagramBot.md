@@ -199,44 +199,41 @@ Call the like/comment and next function using a loop to spam likes/comments
 
 def like_till_the_end(): 
 	next_el = browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a')
-	#The xpath of next in first post is different from others
 	while(True): 
-		# if next button is there then 
-		if next_el != False: 
+		try: 
 			# click the next button 
 			next_el.click() 
 			sleep(2) 
 			# like the post 
 			like_post()	 
-			sleep(2)			 
-		else: 
-			print("The End")  #it will show an error at the end , recommended to fix it 
+			sleep(2)	
+			next_el = next_post()		 
+		except Exception as e: 
+			print("The last post")  #When it reaches the end 
 			break
-		next_el = next_post()
 
 def comment_till_the_end(): 
 	next_el = browser.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a')
-	#The xpath of next in first post is different from others
 	while(True): 
 		# if next button is there then 
-		if next_el != False: 
+		try: 
 			# click the next button 
 			next_el.click() 
 			sleep(2) 
 			# comments on the post 
 			comment_post(msg)	 
-			sleep(2)			 
-		else: 
-			print("The End") 
+			sleep(2)	
+			next_el = next_post()		 
+		except Exception as e: 
+			print("The last post") #When it reaches the end 
 			break
-		next_el = next_post()
 
 like_till_the_end()
 comment_till_the_end()		
 
 ```
 
-The program will close after liking/commenting on all posts . Because it cant find the xpath of next on the last post (it will give a run time error).
+The program will print out "The last post" . When it finishes liking / commenting on all posts.
 
 # To close the browser
 
