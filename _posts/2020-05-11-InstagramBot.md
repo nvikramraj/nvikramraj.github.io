@@ -1,7 +1,7 @@
 ---
-title: "Python Project : InstagramBot"
+title: "InstagramBot"
 date: 2020-05-11
-tags: [Python,Bot]
+tags: [Bot]
 excerpt: "A Bot that can follow an account and like/comment on posts"
 ---
 

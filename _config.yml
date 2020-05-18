@@ -130,9 +130,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/nvikramraj"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/nvikramraj/"
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:

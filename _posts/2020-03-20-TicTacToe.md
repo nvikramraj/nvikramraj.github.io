@@ -1,7 +1,7 @@
 ---
-title: "Python Project : Tic Tac Toe Game"
+title: "Tic Tac Toe"
 date: 2020-03-20
-tags: [Python]
+tags: [Game]
 excerpt: "A fun 2 player game made using python basics"
 ---
 
