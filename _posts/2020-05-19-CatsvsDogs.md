@@ -12,6 +12,8 @@ I've created a neural network with 4 hidden layers which take 1 channel input an
 
 Before reading the code check if you have installed Pytorch . If not consider checking out my guide on it's installation [here](https://nvikramraj.github.io/Anaconda/)
 
+Download / Clone the code [here](https://github.com/nvikramraj/Neural_Networks-CatsvsDogs).
+
 
 ## Steps involved in making this neural network :
 
@@ -264,6 +266,12 @@ def train():
                     val_acc , val_loss = test(size = 100) #getting acc and loss of test images after training 50 times
                     f.write(f"{MODEL_NAME},{round(time.time(),3)},{round(float(acc),2)},{round(float(loss),4)},{round(float(val_acc),2)},{round(float(val_loss),4)}\n")
 
+train()
+#model name will be used to calculate the graph , take note of it in the output window
+MODEL_NAME = f"model -{int (time.time())}"
+print(MODEL_NAME) 
+#giving our model a name
+
 ```
 
 ## Testing the neural network :
@@ -284,3 +292,209 @@ def test(size = 32):
 
 ```
 
+## Plotting the graph :
+
+To visualize if your neural network is improving , Plot two graphs accuracy vs time and loss vs time .
+
+You need to plot accuracy / loss of train_X and test_X in the same Y- axis.
+
+The time stamp is same for all graphs.
+
+Run this in a separate file.
+
+```python
+
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+
+style.use("ggplot")
+
+model_name = "model -1589867511"
+#copy the model name paste it here , from previous program or just copy the model number from model_graph.log
+
+def create_acc_loss_graph(model_name):
+	contents = open("model_graph.log","r").read().split('\n')
+
+	times = []
+	accuracies = []
+	losses = []
+
+	val_accs = []
+	val_losses = []
+
+	for c in contents:
+		if model_name in c:
+			name , timestamp , acc , loss , val_acc , val_loss = c.split(",")
+
+			times.append(float(timestamp))
+			accuracies.append(float(acc))
+			losses.append(float(loss))
+
+			val_accs.append(float(val_acc))
+			val_losses.append(float(val_loss))
+#getting values of time , accuracy and loss in a list
+	fig = plt.figure()
+
+	ax1 = plt.subplot2grid((2,1), (0,0))
+	ax2 = plt.subplot2grid((2,1), (1,0), sharex=ax1)
+#plotting two graphs accuracy vs time and loss vs time
+
+	ax1.plot(times, accuracies, label="acc")
+	ax1.plot(times, val_accs, label="val_acc")
+	ax1.legend(loc=2)
+	ax2.plot(times,losses, label="loss")
+	ax2.plot(times,val_losses, label="val_loss")
+	ax2.legend(loc=2)
+	plt.show()
+
+create_acc_loss_graph(model_name)
+
+```
+
+
+The graph after 30 EPOCHS
+
+<img src="https://raw.githubusercontent.com/nvikramraj/nvikramraj.github.io/master/images/catsvsdogs/epoch30.JPG" alt="epoch30"/>
+
+You can see the deviation between train_X and test_X . It means that train_X just memorized all the images in dataset and thats why the accuracy/loss of test_X does not increase/decrease.
+
+It would be enough to train it for 5-10 EPOCHS.
+
+The graph after 8 EPOCHS
+
+<img src="https://raw.githubusercontent.com/nvikramraj/nvikramraj.github.io/master/images/catsvsdogs/epoch.JPG" alt="epoch"/>
+
+You can see that the accuracy is around 80%-70% . Which is the maximum for this model , training further would be useless.
+
+It could be improved by validating , which maybe included in the future.
+
+
+## Checking outside the dataset :
+
+First you need to save the parameters of your model , then you don't have to train every single time.
+
+```python
+
+save_path = os.path.join("model.pt")
+torch.save(net.state_dict(),save_path) #type this in the main program to save
+#saving parameters
+
+```
+
+Then to test it , create an another file . Copy paste the model only and load the parameters of you model.
+
+This is my code to just check if the image has a dog / cat.
+
+```python
+
+import os
+import cv2
+import numpy as np
+from tqdm import tqdm
+import matplotlib.pyplot as plt
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+import time
+
+# you need to initalize the class again
+class Net(nn.Module):
+    def __init__(self):
+        super().__init__()
+        # 3 hidden layers with 32 / 64 / 128 neurons . this caculates in convolution 2d
+        self.conv1 = nn.Conv2d(1,32,5) # 1 input , 32 neurons , 5 - kernel size
+        self.conv2 = nn.Conv2d(32,64,5)
+        self.conv3 = nn.Conv2d(64,128,5)
+
+        x = torch.randn(50,50).view(-1,1,50,50) # we need to convert 2d to 1d so we need to find the 1d size
+        self._to_linear = None # using random generated data to find the size
+        self.convs(x)
+
+        self.fc1 = nn.Linear(self._to_linear,512) # calculation in 1-d using 512 neurons
+        self.fc2 = nn.Linear(512,2) # out put 2 neurons cat / dog
+
+    def convs(self,x):
+        x = F.max_pool2d(F.relu(self.conv1(x)),(2,2))#using pooling and activation function to round off values
+        x = F.max_pool2d(F.relu(self.conv2(x)),(2,2))
+        x = F.max_pool2d(F.relu(self.conv3(x)),(2,2))
+
+        #print(x[0].shape)
+
+        if self._to_linear is None:
+
+            self._to_linear = x[0].shape[0]*x[0].shape[1]*x[0].shape[2] # to get the size of 1-d or flattened img
+
+        return x
+
+    def forward (self,x):
+        x = self.convs(x) # calculating convolution first
+        x = x.view(-1,self._to_linear) # converting to linear
+        x = F.relu(self.fc1(x)) # calculating linear
+        x = self.fc2(x) # getting output
+        return F.softmax(x,dim =1) #using activation function at output to get % or 0-1 values
+
+net = Net()
+#loading the saved parameters
+save_path = os.path.join("model.pt")
+net.load_state_dict(torch.load(save_path))
+net.eval()
+
+# To check if a random image is a dog or a cat
+while True:
+
+    get_path = input("Enter the path of the image :")
+
+    #save_path = os.path.join("Enter image name")
+    #if the image is in ur code folder use the above code
+
+    img = cv2.imread(get_path)
+
+    X = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    X = cv2.resize(X, (50,50))
+
+    X = torch.Tensor(np.array(X)).view(-1,50,50)
+    #gets all the image values from dataset , in the size 50x50
+    X = X/255.0
+    # since gray scale is of pixels from 0-255 converting to 0-1
+
+    cod = net((X.view(-1,1,50,50)))
+    check_cod = torch.argmax(cod)
+    print(cod,check_cod)
+    if check_cod == 0:
+        animal = "Cat"
+
+    else :
+        animal = "Dog"
+
+    plt.axis("off")
+    plt.title(animal)
+    plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+    plt.show()
+
+    yorn = input("Do you want to check for another image (y/n) ?")
+
+    if yorn == "n" or yorn == "N" :
+        break
+
+```
+I downloaded 6 images and ran them through this code to check the output .
+
+I got 4 out of 6 correct .
+
+## Correct outputs : 
+
+<img src="https://raw.githubusercontent.com/nvikramraj/nvikramraj.github.io/master/images/catsvsdogs/cor_1.JPG" alt="cor_1"/>
+
+<img src="https://raw.githubusercontent.com/nvikramraj/nvikramraj.github.io/master/images/catsvsdogs/cor_2.JPG" alt="cor_2"/>
+
+<img src="https://raw.githubusercontent.com/nvikramraj/nvikramraj.github.io/master/images/catsvsdogs/cor_3.JPG" alt="cor_3"/>
+
+<img src="https://raw.githubusercontent.com/nvikramraj/nvikramraj.github.io/master/images/catsvsdogs/cor_4.JPG" alt="cor_4"/>
+
+## Wrong outputs :
+
+<img src="https://raw.githubusercontent.com/nvikramraj/nvikramraj.github.io/master/images/catsvsdogs/fal_1.JPG" alt="fal_1"/>
+
+<img src="https://raw.githubusercontent.com/nvikramraj/nvikramraj.github.io/master/images/catsvsdogs/fal_2.JPG" alt="fal_2"/>
