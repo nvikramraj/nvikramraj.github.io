@@ -382,7 +382,7 @@ torch.save(net.state_dict(),save_path) #type this in the main program to save
 
 ```
 
-Then to test it , create an another file . Copy paste the model only and load the parameters of you model.
+Then to test it , create an another file . Copy paste the model only and load the parameters of your model.
 
 This is my code to just check if the image has a dog / cat.
 
