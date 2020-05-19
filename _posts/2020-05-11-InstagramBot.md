@@ -39,7 +39,7 @@ from time import sleep #inbuilt function
 
 The xpaths used in this code will work for firefox . The delay/sleep time can be customised .
 
-# Launching FireFox :
+## Launching FireFox :
 
 To launch the browser , you will need to give the path to geckodriver (dl link above) .
 eg :  X:\my_bot\geckodriver.exe
@@ -52,7 +52,7 @@ browser = webdriver.Firefox(executable_path = exe_path) #Gets the geckodriver
 
 ```
 
-# Opening Instagram and logging in :
+## Opening Instagram and logging in :
 
 To log in on Instagram , you will need to find the xpath 3 elements :
 
@@ -92,7 +92,7 @@ my_bot = insta_bot(username,password)
 ```
 I've used a constructor in class to launch instagram and log in . But it is not necessary , it works perfectly fine outside a class also.
 
-# To find an account :
+## To find an account :
 
 To search for the account , you need to find the search bar's xpath.
 The bot will fill the name in search bar and press Return twice , The page will be directed to that account.
@@ -114,7 +114,7 @@ my_bot.finduser(like_acc)
 
 ```
 
-# Following an account :
+## Following an account :
 
 Find the xpath of follow button and click on it.
 
@@ -128,7 +128,7 @@ follow()
 
 ```
 
-# Liking / Commenting on a Post :
+## Liking / Commenting on a Post :
 
 After going to an account , to like/comment on a post . Click on the first post (by finding the xpath).
 
@@ -178,7 +178,7 @@ msg = input("Enter the comment you want to spam : ")
 comment_post(msg)
 
 ```  
-# To like/comment on all posts :
+## To like/comment on all posts :
 
 To do this we need a way to go to the next post , Again all we have to do is find the xpath of next button and click it.
 
@@ -235,7 +235,7 @@ comment_till_the_end()
 
 The program will print out "The last post" . When it finishes liking / commenting on all posts.
 
-# To close the browser
+## To close the browser
 
 This will close the firefox browser which geckodriver is using.
 

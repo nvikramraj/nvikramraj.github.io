@@ -33,7 +33,7 @@ init() #initalizes colorama
 
 ```
 
-# The game board
+## The game board
 
 This is the code used to get the size of the game map.
 
@@ -113,7 +113,7 @@ def game_board(game_map,player=0,row=0,column=0,just_display=False):
 
 ```
 
-# Choosing the winner :
+## Choosing the winner :
 
 There are 3 ways to win the game :
 
@@ -187,7 +187,7 @@ def win(current_game):
 
 ```
 
-# Highlighting the winner :
+## Highlighting the winner :
 
 To high light the winner , I took the indexes of the row/column/diagonal that won and changed the text background to magenta.
 
@@ -228,7 +228,7 @@ def show_winner(win_game,indexes):   # to highligh the winner
 
 
 
-# Getting inputs from the user :
+## Getting inputs from the user :
 
 Finally the user interface.
 We need to get the game size , the index/place on the map they want to play at. Make the list that holds the values.
