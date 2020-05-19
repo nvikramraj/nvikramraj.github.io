@@ -13,14 +13,14 @@ I've created a neural network with 4 hidden layers which take 1 channel input an
 Before reading the code check if you have installed Pytorch . If not consider checking out my guide on it's installation [here](https://nvikramraj.github.io/Anaconda/)
 
 
-## The steps involved in making this neural network :
+## Steps involved in making this neural network :
 
 * Getting the dataset (input)
 * Establish the neural network
 * Train the neural network
-* Validate the neural network
+* Testing the neural network
 * Plotting graphs
-* Test the neural network
+* Test the neural network on images outside dataset
 
 **Packages to be imported**
 
@@ -64,7 +64,6 @@ Now , you need to convert the images in those folder to an array.
 In this code I've converted the image to grayscale and resized it to 50x50 pixels.
 Then used np.array to convert the image to a matrix.
 
-**Code**
 
 ```python
 
@@ -131,6 +130,7 @@ So I've created a random matrix of 50x50 size to find the shape of data after it
 The linear layer has 512 neurons and gives the output as a probability of Cats vs Dogs.
 
 Activation function used : Rectified Linear 
+
 Activation function used on output : softmax
 
 
@@ -172,4 +172,115 @@ class Net(nn.Module):
         x = self.fc2(x) # getting output
         return F.softmax(x,dim =1) #using activation function at output to get % or 0-1 values
 
+
+
 ```
+
+## Training the neural network :
+
+Before training the network, you need to convert the np.array to a tensor.
+Then you need to seperate a part of the images to train and a part of the images to test the neural network.
+These two sets of images should not overlap.
+
+**Coverting to tensor**
+
+```python
+
+X = torch.Tensor([i[0] for i in training_data]).view(-1,50,50)
+#converting numpy array to tensor 
+X = X/255.0
+# since gray scale is of pixels from 0-255 converting to 0-1
+y = torch.Tensor([i[1] for i in training_data])
+#Getting the labels for corresponding image values
+VAL_PCT = 0.1  # lets reserve 10% of images for validation (test images)
+val_size = int(len(X)*VAL_PCT)
+#print(val_size)
+
+train_X = X[:-val_size] #gets all images other than test images
+train_y = y[:-val_size]
+
+test_X = X[-val_size:] #gets all test images
+test_y = y[-val_size:]
+
+```
+
+You want to add an optimizer and loss function , so that the optimizer can tune the parameters to reduce loss.
+
+```python
+
+optimizer = optim.Adam(net.parameters(), lr=0.001)
+#using optimizer to tune parameters and learning rate 0.001
+loss_function = nn.MSELoss()
+#using mean square error to calculate loss ( because one hot vector)
+
+```
+
+Before training the neural network . The test and train function are both going to calculate loss and accuracy only difference is in train function has to optimize and reduce loss .
+So we create a funtion which can do that and just call them in train / test function.
+
+```python
+
+def fwd_pass(X, y, train=False):
+    if train:
+        net.zero_grad()#makes gradient zero
+    outputs = net(X)
+    matches  = [torch.argmax(i)==torch.argmax(j) for i, j in zip(outputs, y)]
+    #To check if the ouput matches the labels
+    acc = matches.count(True)/len(matches)
+    loss = loss_function(outputs, y)
+    #calculating accuracy and loss %
+    if train:
+        loss.backward()
+        optimizer.step()
+        #reducing loss and increasing accuracy
+
+```
+
+Train function :
+
+In this function , we are going to pass the train_X in net()/model to get the output.
+
+The BATCH_SIZE value can be varied according to your GPU capabilities.
+
+EPOCHS is how many time you want to train the network.
+
+For this model EPOCHS around 5-10 will give accuracy around 80% . But after that it does not improve graph will be shown below.
+
+```python
+
+def train():
+    BATCH_SIZE = 100 #no of samples in a go
+    EPOCHS = 8 # no of full passes
+    with open("model_graph.log","a") as f: #to register acc,loss of test and train images for plotting graph
+        for epoch in range(EPOCHS):
+            
+            for i in tqdm(range(0,len(train_X),BATCH_SIZE)): #there are around 25500(approx) images 
+                #so the loop runs for 25500/100 times that is 255 times 
+                batch_X = train_X[i:i+BATCH_SIZE].view(-1,1,50,50).to(device)
+                batch_y = train_y[i:i+BATCH_SIZE].to(device)
+                acc,loss = fwd_pass(batch_X , batch_y , train= True)
+                #getting acc and loss of train images
+                if i % 50 == 0: #updating loss and acc after every 50 iterations
+                    val_acc , val_loss = test(size = 100) #getting acc and loss of test images after training 50 times
+                    f.write(f"{MODEL_NAME},{round(time.time(),3)},{round(float(acc),2)},{round(float(loss),4)},{round(float(val_acc),2)},{round(float(val_loss),4)}\n")
+
+```
+
+## Testing the neural network :
+
+Testing the neural network gives you a good idea on how the neural network will behave on images outside the dataset. It is usually used to validate the network and optimize it further but, I've not done it because it is my first project on neural networks.
+
+In my case I've used test to calculate the acc and loss on test_X images . 
+
+```python
+
+#To test if the neural network is trained correctly by using the images validated
+def test(size = 32):
+    random_start = np.random.randint(len(test_X)-size) #getting a random slice of given size
+    X,y = test_X[random_start:random_start+size], test_y[random_start:random_start+size]
+    with torch.no_grad(): #calculating acc and loss for the test images
+        val_acc , val_loss = fwd_pass(X.view(-1, 1,50,50).to(device) , y.to(device))
+    return val_acc, val_loss
+
+```
+
