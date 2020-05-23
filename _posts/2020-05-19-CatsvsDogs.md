@@ -10,7 +10,7 @@ excerpt: "A network that can differentiate between images of cats and dogs"
 I've created a neural network with 4 hidden layers which take 1 channel input and give 2 outputs (Cat / Dog).
 (Used convolution for 3 hidden layers and linear for 1 hidden layer)
 
-Before reading the code check if you have installed Pytorch . If not consider checking out my guide on it's installation [here](https://nvikramraj.github.io/Anaconda/)
+Before reading the code check if you have installed Pytorch . If not consider checking out my guide on it's installation [here](https://nvikramraj.github.io/Anaconda/).
 
 Download / Clone the code [here](https://github.com/nvikramraj/Neural_Networks-CatsvsDogs).
 
