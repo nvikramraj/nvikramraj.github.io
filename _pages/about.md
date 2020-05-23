@@ -36,6 +36,10 @@ St.Johns English School And Junior College
 
 - Loyola-ICAM College Of Engineering And Technology | 17/08/2019
 	
-	* Secured **2nd place** in the event MindFlayer (A coding and debugging competition).
+ 	* Secured **2nd place** in the event MindFlayer (A coding and debugging competition).
 
+## Credentials :
 
+[Certificates](https://drive.google.com/open?id=1N03Vu40wywwjXnemZBEDdC8wrLvbyVRn)
+
+[Resume](https://drive.google.com/open?id=1u8qiGeyHH3TisTRksfs12txqbwBBDC_d)
