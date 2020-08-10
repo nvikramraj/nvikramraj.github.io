@@ -15,12 +15,12 @@ Hey there ! I'm a student currently pursuing ECE and likes to code on the side .
 
 B.S. Abdur Rahman Cresent Institute of Science and Technology 
  	
-* B-Tech ECE  2017 - Present , CGPA : 9.04
+* B-Tech ECE  2017 - Present , CGPA : 9.01
 
 
 St.Johns English School And Junior College
  	
-* Higher Education 12th - 2017 , Percentage : 79.94%
+* Higher Education 12th - 2017 , Percentage : 79.9%
 * Secondary Education 10th - 2015 , CGPA : 8.4
 
 
