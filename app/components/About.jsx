@@ -9,17 +9,11 @@ const About = ({isDarkMode}) => {
       <h2 className='text-center text-5xl font-Ovo'>About me</h2>
       <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
         <div  className='w-64 sm:w-80 rounded-3x1 max-w-none'>
-          <Image src={assets.user_image} alt='user' className='w-full rounded-3xl' />
+          <Image src={assets.vikram_user_img} alt='user' className='w-full rounded-3xl' />
         </div>
         <div className='flex-1'>
           <p className='mb-10 max-w-2x1 font-Ovo'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac nulla sodales, dapibus dui ac, 
-            aliquam ipsum. Cras blandit arcu sed luctus mattis. Praesent vel fringilla neque. Donec non sodales 
-            lectus, non rutrum sem. Nulla fringilla quam lectus, eget elementum tellus pharetra id. Praesent 
-            elementum sed est non placerat. In eu euismod nulla. Fusce non scelerisque purus. Pellentesque elit 
-            leo, consectetur eu erat eu, tempor consectetur justo. Duis lacus velit, rhoncus suscipit bibendum et, 
-            pretium rutrum purus. Vivamus scelerisque orci eu orci consectetur dignissim. Vestibulum molestie massa 
-            sit amet lorem rutrum finibus. Vivamus interdum dignissim ante ac rhoncus.
+            Upcoming robotics engineer looking forward to working in the field of Autonomous driving and mobile robotics.
           </p>
           <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
             {infoList.map(({icon, iconDark,title,description},index)=>(
