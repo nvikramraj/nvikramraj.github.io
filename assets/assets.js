@@ -84,24 +84,24 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'STRETCH Robot Project',
+        description: 'Dristributed autonomous robot collaboration with Moxie and STRETCH robots.',
+        bgImage: '/Stretch_proj.gif',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'F1 Tenth Project',
+        description: 'Seamless navigation with adaptive sensor switching based on lighting conditions.',
+        bgImage: '/f1tenth_proj.gif',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'Universal Robotics Arm Project',
+        description: 'Realistic drawing replication from digital images using OpenCV and a UR3e robot arm.',
+        bgImage: '/UR3_proj.gif',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'GEM E4 Electric Vehicle Project',
+        description: 'Persistent pedestrian detection and tracking through camera-LiDAR sensor fusion\.',
+        bgImage: '/perception_proj.gif',
     },
 ]
 
@@ -114,8 +114,8 @@ export const serviceData = [
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Python, C++, Bash, PowerShell, Azure CLI, LabView' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'M.Eng in Autonomy and Robotics' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Frameworks', description: 'PyTorch, OpenCV, ROS, ROS2, Gazebo, Anaconda, Docker, Azure' }
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Technologies', description: 'Deep Learning, Linux, Reinforcement Learning, NVIDIA Jetson, GEM E2, GEM E4, F1 Tenth, YOLO, Detic, SigLIP, UR3e' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Frameworks', description: 'PyTorch, OpenCV, ROS, ROS2, Gazebo, Gazebo Ign, Open AI, GEM Stack, Unity, Anaconda, Docker, Azure' }
 ];
 
 export const toolsData = [

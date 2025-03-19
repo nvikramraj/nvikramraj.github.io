@@ -13,7 +13,7 @@ const About = ({isDarkMode}) => {
         </div>
         <div className='flex-1'>
           <p className='mb-10 max-w-2x1 font-Ovo'>
-            Upcoming robotics engineer looking forward to working in the field of Autonomous driving and mobile robotics.
+          I’m a Master of Engineering candidate in Autonomy and Robotics at the University of Illinois Urbana-Champaign, passionate about bridging cutting-edge AI with physical robotic systems to solve real-world challenges. My work revolves around computer vision, sensor fusion, and distributed autonomous systems, with a focus on creating technologies that enhance human lives.
           </p>
           <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
             {infoList.map(({icon, iconDark,title,description},index)=>(
@@ -26,14 +26,7 @@ const About = ({isDarkMode}) => {
             ))}
           </ul>
 
-          <h4 className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Tools I use</h4>
-          <ul className='flex items-center gap-3 sm:gap-5'>
-            {toolsData.map((tool,index)=>(
-              <li className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500' key={index}>
-                <Image src={tool} alt='Tool' className='w-5 sm:w-7' />
-              </li>
-            ))}
-          </ul>
+
         </div>
       </div>
 
