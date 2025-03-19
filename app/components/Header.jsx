@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
 
-const Header = () => {
+const Header = ({isDarkMode}) => {
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
       <motion.div
@@ -22,6 +22,24 @@ const Header = () => {
         <a href="/Vikram_Resume_perception.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black' >
         My Resume <Image src={assets.download_icon} alt='' className='w-4' /></a>
       </div>
+      
+      
+      <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
+
+        <a href="https://www.linkedin.com/in/nvikramraj/" className='p-3 
+          transition-all duration-300 hover:scale-105'>
+          <Image src={isDarkMode ? assets.linkedin_dark : assets.linkedin} alt='LinkedIn' className='w-12 h-12 sm:w-12 sm:h-12 object-contain dark:invert'/>
+        </a>
+        <a href="https://github.com/nvikramraj" className='
+            p-1 rounded-full bg-white dark:bg-white border-2 border-gray-300 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-200 
+            transition-all duration-300 hover:scale-105 w-15 h-15 flex items-center justify-center'>
+            <Image src={isDarkMode ? assets.github : assets.github_dark} alt='GitHub' className='w-12 h-12 object-contain'/>
+        </a>
+
+      </div>
+
+
+      
     </div>
   )
 }
