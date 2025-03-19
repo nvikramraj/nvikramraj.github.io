@@ -100,9 +100,56 @@ export const workData = [
     },
     {
         title: 'GEM E4 Electric Vehicle Project',
-        description: 'Persistent pedestrian detection and tracking through camera-LiDAR sensor fusion\.',
+        description: 'Persistent pedestrian detection and tracking through camera-LiDAR sensor fusion.',
         bgImage: '/perception_proj.gif',
     },
+]
+
+export const timeData = [
+    {
+        title: 'McKechnie Family Life Home, UIUC',
+        time:'Jan 2025 - Present',
+        role:'Robotics Engineer, Intern',
+        description: ['Developing interactive demos for researchers to showcase STRETCH robot capabilities in assisting the elderly with household tasks in an IoT-enabled home using a combination of LLMs and deep learning models.',
+            'Designing strategies for distributed autonomous system coordination to optimize task efficiency with STRETCH.'
+        ],
+        
+    },
+    {
+        title: 'University Of Illiois Urbana-Champaign',
+        time:'Aug 2024 - Present',
+        role:'M.Eng, Autonomy and Robotics',
+        description: ['My course work includes working with mobile robotics and autonomous vehicles, currently focusing on developing my skill set on optimizing deep learning perception models and real time systems coordination.',
+            'Related Course Work: Autonomous Vehicle System Engineering, Deep Learning with Computer Vision, Principles of Safe Autonomy'
+        ],
+        
+    },
+    {
+        title: 'Accenture',
+        time:'Aug 2021 - Jul 2024',
+        role:'Azure DevOps Automation Engineer',
+        description: ['Developed and led automation development in the project, implementing Azure Runbooks for password rotation, vulnerability fixes and maintenance for cloud infrastructure and BareMetal physical servers. Reducing manual hours spent by 90%.',
+            'Led deployment and testing of cognitive vision models on IoT edge servers at Microsoft Datacenters globally along side of Azure Cognitive services development team'
+        ],
+        
+    },
+    {
+        title: 'Nokia',
+        time:'Feb 2021 - May 2021',
+        role:'Embedded System Engineer, Intern',
+        description: ['Developed an IoT device to detect obstacles blocking accessibility of fire extinguishers and alert security for Nokia’s Manufacturing Factory as part of their safety measures.',
+        ],
+        
+    },
+    {
+        title: 'B.S. Abdur Rahman Crescent Institute of Science & Technology',
+        time:'Jul 2017 - Jun 2021',
+        role:'B.Tech, Electronics and Communication Engineering',
+        description: ['My course work included working with embedded systems, real time system processing and image processing',
+            'Related Course Work: Real Time Embedded Systems, Image Processing, '
+        ],
+        
+    }
 ]
 
 export const serviceData = [
