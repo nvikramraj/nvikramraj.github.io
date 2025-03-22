@@ -11,10 +11,11 @@ const Project = ({isDarkMode}) => {
         enabling smarter homes, safer autonomous vehicles, and tools that amplify human potential.
       </p>
 
-
+    
       <div className='grid grid-cols-auto my-10 gap-5 dark:text-black'>
               {workData.map((project, index) => (
                   <div key={index} className="flex flex-col gap-5 group cursor-pointer">
+                  <a href={project.link} className="flex flex-col gap-5 group">
                   {/* Image Container */}
                   <div 
                       style={{ backgroundImage: `url(${project.bgImage})` }}
@@ -38,6 +39,7 @@ const Project = ({isDarkMode}) => {
                       />
                       </div>
                   </div>
+                  </a>
                   </div>
               ))}
           </div>

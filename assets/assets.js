@@ -95,21 +95,25 @@ export const workData = [
         title: 'STRETCH Robot Project',
         description: 'Dristributed autonomous robot collaboration with Moxie and STRETCH robots.',
         bgImage: '/Stretch_proj.gif',
+        link:'./projects'
     },
     {
         title: 'F1 Tenth Project',
         description: 'Seamless navigation with adaptive sensor switching based on lighting conditions.',
         bgImage: '/f1tenth_proj.gif',
+        link: 'https://www.youtube.com/watch?v=_oN69fMF7Dk',
     },
     {
         title: 'Universal Robotics Arm Project',
         description: 'Realistic drawing replication from digital images using OpenCV and a UR3e robot arm.',
         bgImage: '/UR3_proj.gif',
+        link: 'https://uofi.box.com/s/kke8qw48yby7gts5eg5nbxk7hn3xkin6',
     },
     {
         title: 'GEM E4 Electric Vehicle Project',
         description: 'Persistent pedestrian detection and tracking through camera-LiDAR sensor fusion.',
         bgImage: '/perception_proj.gif',
+        link: 'https://uofi.box.com/s/f4bd219vgkfieyz49dr2q30jx718238d'
     },
 ]
 
