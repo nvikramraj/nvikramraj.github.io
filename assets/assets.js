@@ -118,8 +118,8 @@ export const timeData = [
         title: 'McKechnie Family Life Home, UIUC',
         time:'Jan 2025 - Present',
         role:'Robotics Engineer, Intern',
-        description: ['Developing interactive demos for researchers to showcase STRETCH robot capabilities in assisting the elderly with household tasks in an IoT-enabled home using a combination of LLMs and deep learning models.',
-            'Designing strategies for distributed autonomous system coordination to optimize task efficiency with STRETCH.'
+        description: ['Enhancing the STRETCH Robot AI repository to improve object recognition, pickup, and handover reliability for assisting the elderly in IoT-enabled homes and achieved an increase in pickup success rate from 40% to 80%.',
+            'Developing distributed autonomous system coordination between STRETCH and Moxie to enable seamless collaboration.'
         ],
         
     },
@@ -135,9 +135,9 @@ export const timeData = [
     {
         title: 'Accenture',
         time:'Aug 2021 - Jul 2024',
-        role:'Azure DevOps Automation Engineer',
-        description: ['Developed and led automation development in the project, implementing Azure Runbooks for password rotation, vulnerability fixes and maintenance for cloud infrastructure and BareMetal physical servers. Reducing manual hours spent by 90%.',
-            'Led deployment and testing of cognitive vision models on IoT edge servers at Microsoft Datacenters globally along side of Azure Cognitive services development team'
+        role:'Automation Engineer',
+        description: [' Led deployment and testing of cognitive vision models on IoT edge servers to predict, identify and report faulty surveillance cameras at Microsoft Datacenters globally along side of Azure Cognitive services development team.',
+            'Developed and led automation development in the project, implementing CI/CD pipelines for Azure resource procurement and setup, password rotation, vulnerability fixes and maintenance for cloud infrastructure and BareMetal physical servers. Reducing manual hours spent by 90%.'
         ],
         
     },
@@ -145,7 +145,7 @@ export const timeData = [
         title: 'Nokia',
         time:'Feb 2021 - May 2021',
         role:'Embedded System Engineer, Intern',
-        description: ['Developed an IoT device to detect obstacles blocking accessibility of fire extinguishers and alert security for Nokia’s Manufacturing Factory as part of their safety measures.',
+        description: ['Developed an IoT device to detect obstacles blocking accessibility of fire extinguishers and alert security in real time for Nokia’s Manufacturing Factory as part of their safety measures.',
         ],
         
     },
