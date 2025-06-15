@@ -8,17 +8,16 @@ const About = ({isDarkMode}) => {
       <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
       <h2 className='text-center text-5xl font-Ovo'>About me</h2>
       <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
-        <div  className='w-64 sm:w-80 rounded-3x1 max-w-none'>
+        <div  className='w-64 sm:w-80 rounded-3xl max-w-none'>
           <Image src={assets.vikram_user_img} alt='user' className='w-full rounded-3xl' />
         </div>
         <div className='flex-1'>
           <p className='max-w-2x1 font-Ovo'>
-          I’m a Master of Engineering candidate in Autonomy and Robotics at the University of Illinois Urbana-Champaign, passionate about bridging cutting-edge AI with 
-          physical robotic systems to solve real-world challenges. My work revolves around computer vision, sensor fusion, and distributed autonomous systems, with a 
+          Passionate about bridging cutting-edge AI with physical robotic systems to solve real-world challenges. My work revolves around computer vision, autonomous vehicles, mobile robots, real time systems, and distributed autonomous systems, with a 
           focus on creating technologies that enhance human lives. 
           </p>
           <p className='mb-10 max-w-2x1 font-Ovo'>
-          I am currently on the lookout for Summer Internship roles starting May 2025. Please feel free to reach out if you think I would be a good fit for your team!
+          I am currently on the lookout for Fall CO-OP roles starting August 2025. Please feel free to reach out if you think I would be a good fit for your team!
           </p>
           <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
             {infoList.map(({icon, iconDark,title,description},index)=>(

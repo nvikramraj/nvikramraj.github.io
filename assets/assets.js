@@ -1,4 +1,3 @@
-import user_image from './user-image.png';
 import vikram_user_img from './Vikram_user.jpg'
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
@@ -18,7 +17,7 @@ import vikram_logo_dark from './vikram-logo-dark.png';
 import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
-import profile_img from './profile-img.png';
+import profile_img from './profile-img.jpg';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -44,7 +43,6 @@ import github from './github.png';
 import github_dark from './github_dark.png';
 
 export const assets = {
-    user_image,
     vikram_user_img,
     code_icon,
     code_icon_dark,
@@ -93,37 +91,64 @@ export const assets = {
 export const workData = [
     {
         title: 'STRETCH Robot Project',
-        description: 'Dristributed autonomous robot collaboration with Moxie and STRETCH robots.',
+        description: 'Integrated STRETCH AI in STRETCH 2 at UIUC College of Applied Health Sciences and customized the repository to support the pick-and-place demo on GPUs with less than 8GB VRAM.',
         bgImage: '/Stretch_proj.gif',
-        link:'./projects'
+        link:'https://github.com/lifehome-illinois/Stretch_AI_Illinois'
     },
     {
         title: 'F1 Tenth Project',
-        description: 'Seamless navigation with adaptive sensor switching based on lighting conditions.',
+        description: 'Introduced adaptive sensor switching between camera and LiDAR based on lighting conditions. Optimized for NVIDIA Jetson, achieving high-speed lane detection using pure computer vision.',
         bgImage: '/f1tenth_proj.gif',
         link: 'https://www.youtube.com/watch?v=_oN69fMF7Dk',
     },
     {
         title: 'Universal Robotics Arm Project',
-        description: 'Realistic drawing replication from digital images using OpenCV and a UR3e robot arm.',
+        description: 'Accurate replication of digital images into realistic drawings using OpenCV and a UR3e robotic arm, with a focus on improving drawing efficiency by retaining only essential features.',
         bgImage: '/UR3_proj.gif',
         link: 'https://uofi.box.com/s/kke8qw48yby7gts5eg5nbxk7hn3xkin6',
     },
     {
-        title: 'GEM E4 Electric Vehicle Project',
-        description: 'Persistent pedestrian detection and tracking through camera-LiDAR sensor fusion.',
+        title: 'Hyper-Realistic Gazebo Simulator',
+        description: 'Designed a hyper-realistic simulation environment of UIUC Highbay for GEM E2/E4 autonomous vehicle and dynamic agent spawning from text-based scene descriptions.',
+        bgImage: '/gazebo_gem.gif',
+        link: 'https://github.com/harishkumarbalaji/POLARIS_GEM_Simulator'
+    },
+    {
+        title: 'Persistent Pedestrian Tracker',
+        description: 'Real-time, persistent pedestrian detection and tracking on a GEM E4 autonomous vehicle using techniques such as sensor fusion, YOLO, voxel downsampling, and 2D-3D projection/back-projection.',
         bgImage: '/perception_proj.gif',
         link: 'https://uofi.box.com/s/f4bd219vgkfieyz49dr2q30jx718238d'
+    },
+    {
+        title: '6-Dof Pose Estimation Model',
+        description: 'Developed a deep learning model combining YOLOv11 and ResNet to predict 6-DoF poses for robotic arm part-picking in warehouses, using RGB-D feature fusion via a dual-stream U-Net architecture.',
+        bgImage: '/6dof.gif',
+        link: 'https://github.com/nvikramraj/6-DoF-Pose-Model',
     },
 ]
 
 export const timeData = [
     {
-        title: 'McKechnie Family Life Home, UIUC',
-        time:'Jan 2025 - Present',
+        title: 'Kohler',
+        time:'Jun 2025 - Present',
+        role:'Computer Vision Engineer, Intern',
+        description: ['Developing an object detection model to validate packed items during the product inspection process, aiming to reduce human error in the production pipeline'
+        ],
+    },
+    {
+        title: 'UIUC College of Veterinary Medicine',
+        time:'Jun 2025 - Present',
+        role:'AI Engineer, Intern',
+        description: ['Developing a computer vision pipeline to evaluate state-of-the-art animal pose estimation models using our generalized swine dataset, with the goal of identifying the most suitable model for real-world farm applications'
+        ],
+        
+    },
+    {
+        title: 'UIUC Health and Kinesiology Lab',
+        time:'Jan 2025 - May 2025',
         role:'Robotics Engineer, Intern',
-        description: ['Enhancing the STRETCH Robot AI repository to improve object recognition, pickup, and handover reliability for assisting the elderly in IoT-enabled homes and achieved an increase in pickup success rate from 40% to 80%.',
-            'Developing distributed autonomous system coordination between STRETCH and Moxie to enable seamless collaboration.'
+        description: ['Integrated STRETCH AI with low-end GPUs, optimizing performance for deployment on STRETCH robot.',
+            'Improved the STRETCH Robot AI pipeline for object pick-and-place tasks enhancing reliability and safety for elderly assistance and increasing pickup success rate from 20% to 40%.'
         ],
         
     },
@@ -140,8 +165,8 @@ export const timeData = [
         title: 'Accenture',
         time:'Aug 2021 - Jul 2024',
         role:'Automation Engineer',
-        description: [' Led deployment and testing of cognitive vision models on IoT edge servers to predict, identify and report faulty surveillance cameras at Microsoft Datacenters globally along side of Azure Cognitive services development team.',
-            'Developed and led automation development in the project, implementing CI/CD pipelines for Azure resource procurement and setup, password rotation, vulnerability fixes and maintenance for cloud infrastructure and BareMetal physical servers. Reducing manual hours spent by 90%.'
+        description: ['Led deployment and testing of cognitive vision models on IoT edge servers using Docker containers to predict, identify and report faulty surveillance cameras at Microsoft Datacenters.',
+            'Developed and led automation development, implementing CI/CD pipelines for Azure Cloud resources and BareMetal physical servers procurement, setup and maintenance. Reducing manual hours spent by 90%.'
         ],
         
     },
@@ -172,9 +197,9 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Python, C++, Bash, PowerShell, Azure CLI, LabView' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Technologies', description: 'Deep Learning, Linux, Reinforcement Learning, NVIDIA Jetson, GEM E2, GEM E4, F1 Tenth, YOLO, Detic, SigLIP, UR3e' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Frameworks', description: 'PyTorch, OpenCV, ROS, ROS2, Gazebo, Gazebo Ign, Open AI, GEM Stack, Unity, Anaconda, Docker, Azure' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Python, C++, Bash, PowerShell, Azure CLI, LabView, Embedded C, SQL, Matlab' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Technologies', description: 'Deep Learning, ViT, YOLO, Detic, SigLIP, FANUC, NVIDIA Jetson, GEM E2, GEM E4, F1 Tenth, UR3e, Reinforcement Learning ' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Frameworks', description: 'PyTorch, OpenCV, ROS, ROS2, ROBO Flow, Gazebo, Gazebo Ign, Open AI, GEM Stack, Unity, Anaconda, Docker, Azure, Linux' }
 ];
 
 export const toolsData = [

@@ -12,7 +12,7 @@ const Project = ({isDarkMode}) => {
       </p>
 
     
-      <div className='grid grid-cols-auto my-10 gap-5 dark:text-black'>
+      <div className='grid grid-cols-auto xl:grid-cols-4 my-10 gap-5 dark:text-black'>
               {workData.map((project, index) => (
                   <div key={index} className="flex flex-col gap-5 group cursor-pointer">
                   <a href={project.link} className="flex flex-col gap-5 group">
@@ -30,14 +30,7 @@ const Project = ({isDarkMode}) => {
                       <h2 className='font-semibold'>{project.title}</h2>
                       <p className='text-sm text-gray-700'>{project.description}</p>
                       </div>
-                      <div className='border rounded-full border-black w-9 aspect-square flex items-center 
-                                  justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
-                      <Image 
-                          src={assets.send_icon} 
-                          alt='send icon' 
-                          className="w-5" 
-                      />
-                      </div>
+                      
                   </div>
                   </a>
                   </div>

@@ -14,7 +14,7 @@ const Header = ({isDarkMode}) => {
         className="mt-8"
       >
         <Image 
-          src={assets.vikram_user_img} 
+          src={assets.profile_img} 
           alt='Profile' 
           className='rounded-full w-32 h-32 object-cover'
         />
