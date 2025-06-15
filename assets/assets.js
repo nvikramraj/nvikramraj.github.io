@@ -129,19 +129,19 @@ export const workData = [
 
 export const timeData = [
     {
-        title: 'Kohler',
-        time:'Jun 2025 - Present',
-        role:'Computer Vision Engineer, Intern',
-        description: ['Developing an object detection model to validate packed items during the product inspection process, aiming to reduce human error in the production pipeline'
-        ],
-    },
-    {
         title: 'UIUC College of Veterinary Medicine',
         time:'Jun 2025 - Present',
         role:'AI Engineer, Intern',
         description: ['Developing a computer vision pipeline to evaluate state-of-the-art animal pose estimation models using our generalized swine dataset, with the goal of identifying the most suitable model for real-world farm applications'
         ],
         
+    },
+    {
+        title: 'Kohler',
+        time:'Jun 2025 - Present',
+        role:'Computer Vision Engineer, Apprentice',
+        description: ['Developing an object detection model to validate packed items during the product inspection process, aiming to reduce human error in the production pipeline'
+        ],
     },
     {
         title: 'UIUC Health and Kinesiology Lab',
