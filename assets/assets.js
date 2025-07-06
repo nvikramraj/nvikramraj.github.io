@@ -131,24 +131,24 @@ export const timeData = [
     {
         title: 'UIUC College of Veterinary Medicine',
         time:'Jun 2025 - Present',
-        role:'AI Engineer, Intern',
-        description: ['Developing a computer vision pipeline to evaluate state-of-the-art animal pose estimation models using our generalized swine dataset, with the goal of identifying the most suitable model for real-world farm applications'
+        role:'Machine Learning Engineer Intern',
+        description: ['Conducting a comparative analysis of SOTA pose detection models trained on currently available swine datasets to evaluate their ability to detect keypoints in a generalized swine dataset collected from diverse farm environments.'
         ],
         
     },
     {
         title: 'Kohler',
         time:'Jun 2025 - Present',
-        role:'Computer Vision Engineer, Apprentice',
-        description: ['Developing an object detection model to validate packed items during the product inspection process, aiming to reduce human error in the production pipeline'
+        role:'Robotics Machine Learning Engineer Apprentice',
+        description: ['Developing a light weight instance segmentation model to verify the presence of product parts during the packaging stage, integrating it into the overall defect inspection workflow.'
         ],
     },
     {
-        title: 'UIUC Health and Kinesiology Lab',
+        title: 'UIUC College of Applied Health Sciences',
         time:'Jan 2025 - May 2025',
-        role:'Robotics Engineer, Intern',
-        description: ['Integrated STRETCH AI with low-end GPUs, optimizing performance for deployment on STRETCH robot.',
-            'Improved the STRETCH Robot AI pipeline for object pick-and-place tasks enhancing reliability and safety for elderly assistance and increasing pickup success rate from 20% to 40%.'
+        role:'Robotics Machine Learning Engineer Intern',
+        description: ['Reduced VRAM usage from 12GB to 7GB by optimizing the multimodal deep learning pipeline for STRETCH Robot AI, enabling compatibility with low-end GPUs.',
+            'Improved the reliability and safety of elderly-assistive object pick-and-place tasks, doubling the pickup success rate from 20% to 40%.'
         ],
         
     },
@@ -165,8 +165,8 @@ export const timeData = [
         title: 'Accenture',
         time:'Aug 2021 - Jul 2024',
         role:'Automation Engineer',
-        description: ['Led deployment and testing of cognitive vision models on IoT edge servers using Docker containers to predict, identify and report faulty surveillance cameras at Microsoft Datacenters.',
-            'Developed and led automation development, implementing CI/CD pipelines for Azure Cloud resources and BareMetal physical servers procurement, setup and maintenance. Reducing manual hours spent by 90%.'
+        description: ['Implemented CI/CD pipelines for provisioning and managing Docker Containers, Azure Cloud and BareMetal servers, reducing manual setup and maintenance effort by up to 60%.',
+            'Evaluated cognitive vision models on IoT edge servers to assess their accuracy in detecting and reporting faulty surveillance cameras at Microsoft data centers.'
         ],
         
     },
@@ -174,7 +174,7 @@ export const timeData = [
         title: 'Nokia',
         time:'Feb 2021 - May 2021',
         role:'Embedded System Engineer, Intern',
-        description: ['Developed an IoT device to detect obstacles blocking accessibility of fire extinguishers and alert security in real time for Nokia’s Manufacturing Factory as part of their safety measures.',
+        description: ['Developed an IoT device to detect obstacles blocking accessibility of fire extinguishers and alert security in realtime for Nokia’s Manufacturing Factory as part of their safety measures.',
         ],
         
     },
