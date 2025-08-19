@@ -129,19 +129,19 @@ export const workData = [
 
 export const timeData = [
     {
-        title: 'UIUC College of Veterinary Medicine',
-        time:'Jun 2025 - Present',
-        role:'Machine Learning Engineer Intern',
-        description: ['Conducting a comparative analysis of SOTA pose detection models trained on currently available swine datasets to evaluate their ability to detect keypoints in a generalized swine dataset collected from diverse farm environments.'
+        title: 'Kohler',
+        time:'Jun 2025 - Aug 2025',
+        role:'Robotics Machine Learning Engineer Apprentice',
+        description: ['Developed a package validation system using a lightweight instance segmentation model, capable of verifying product presence every 30 ms on an edge device, with seamless integration into the defect inspection pipeline.'
         ],
-        
     },
     {
-        title: 'Kohler',
-        time:'Jun 2025 - Present',
-        role:'Robotics Machine Learning Engineer Apprentice',
-        description: ['Developing a light weight instance segmentation model to verify the presence of product parts during the packaging stage, integrating it into the overall defect inspection workflow.'
+        title: 'UIUC College of Veterinary Medicine',
+        time:'Jun 2025 - Aug 2025',
+        role:'Machine Learning Engineer Intern',
+        description: ['Analyzed and trained SOTA pose detection models on homogeneous vs. heterogeneous environment swine datasets to evaluate their effectiveness at keypoint detection in real-world farm settings, contributing to an upcoming research publication.'
         ],
+        
     },
     {
         title: 'UIUC College of Applied Health Sciences',
