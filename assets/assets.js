@@ -131,7 +131,7 @@ export const timeData = [
     {
         title: 'UIUC College of Veterinary Medicine',
         time:'Jun 2025 - Present',
-        role:'Systems Integration and Validation Engineer Intern',
+        role:'Robotics Systems Integration Engineer Intern',
         description: ['Designing a ROS 2 based automation pipeline hosted in Docker Container for grain quality inspection, integrating multi-sensor systems with existing grain probe infrastructure improving speed, cost, accuracy, hours of operation and safety compared to manual operation of the probe.'
         ],
     },
@@ -154,7 +154,7 @@ export const timeData = [
         title: 'UIUC College of Applied Health Sciences',
         time:'Jan 2025 - May 2025',
         role:'Robotics Machine Learning Engineer Intern',
-        description: ['Reduced VRAM usage from 12GB to 7GB by optimizing the multimodal deep learning pipeline for STRETCH Robot AI, enabling compatibility with low-end GPUs.',
+        description: ['Optimized multimodal deep learning pipeline for STRETCH Robot AI, enabling compatibility with low-end GPUs by reducing VRAM usage from 12GB to 7GB .',
             'Improved the reliability and safety of elderly-assistive object pick-and-place tasks, doubling the pickup success rate from 20% to 40%.'
         ],
         
