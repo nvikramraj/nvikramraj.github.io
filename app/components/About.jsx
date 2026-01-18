@@ -17,7 +17,7 @@ const About = ({isDarkMode}) => {
           focus on creating technologies that enhance human lives. 
           </p>
           <p className='mb-10 max-w-2x1 font-Ovo'>
-          I am currently on the lookout for Spring CO-OP roles starting January 2026 and Full-time starting May 2026. Please feel free to reach out if you think I would be a good fit for your team!
+          I am currently on the lookout for Full-time positions starting May 2026. Please feel free to reach out if you think I would be a good fit for your team!
           </p>
           <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
             {infoList.map(({icon, iconDark,title,description},index)=>(
