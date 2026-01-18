@@ -129,7 +129,7 @@ export const workData = [
 
 export const timeData = [
     {
-        title: 'UIUC College of Veterinary Medicine',
+        title: 'Premier Cooperative Inc',
         time:'Aug 2025 - Present',
         role:'Robotics Systems Integration Engineer Intern',
         description: ['Designing a ROS 2 based automation pipeline hosted in Docker Container for grain quality inspection, integrating multi-sensor systems with existing grain probe infrastructure improving speed, cost, accuracy, hours of operation and safety compared to manual operation of the probe.'
