@@ -131,31 +131,36 @@ export const timeData = [
     {
         title: 'Premier Cooperative Inc',
         time:'Aug 2025 - Present',
-        role:'Robotics Systems Integration Engineer Intern',
-        description: ['Designing a ROS 2 based automation pipeline hosted in Docker Container for grain quality inspection, integrating multi-sensor systems with existing grain probe infrastructure improving speed, cost, accuracy, hours of operation and safety compared to manual operation of the probe.'
+        role:'Founding Robotics Engineer, Contract',
+        description: ['Designed a low cost solution to digitally override a joystick control box of a grain probe using a custom PCB, ESP32 microcontroller and NVIDIA Jetson enabling automation of grain sample collection from a truck.',
+                      'Developed and containerized a ROS 2 pipeline using Docker that detects incoming grain trucks using YOLO, builds a spatial map using Intel Depth Sense camera and controls the grain probe to take grain samples every 45 seconds.',
+                      'Building a web based control interface using React, FastAPI and Uvicorn to configure the system, calibrate cameras, override operations, and start/stop the robotic pipeline.'
         ],
     },
     {
         title: 'Kohler',
         time:'Jun 2025 - Aug 2025',
-        role:'Robotics Machine Learning Engineer Apprentice',
-        description: ['Developed a package validation system using a lightweight instance segmentation model, capable of verifying product presence every 30 ms on an edge device, with seamless integration into the defect inspection pipeline.'
+        role:'Robotics Perception Engineer, Apprentice',
+        description: ['Developed a real time product packaging assistant and validation system for faucets using a lightweight Mask RCNN instance segmentation model, achieving 30 ms inference latency on NVIDIA Jetson.',
+                      'Generated a synthetic dataset to augment missing faucet color and finish variations, resulting in a model achieving above 90% accuracy and mAP on real world inspection.'
         ],
     },
     {
         title: 'UIUC College of Veterinary Medicine',
         time:'Jun 2025 - Aug 2025',
-        role:'Machine Learning Engineer Intern',
-        description: ['Analyzed and trained SOTA pose detection models on homogeneous vs. heterogeneous environment swine datasets to evaluate their effectiveness at keypoint detection in real-world farm settings, contributing to an upcoming research publication.'
+        role:'Artificial Intelligence Engineer, Intern',
+        description: ['Worked as a research assistant for Dr. Ben Blair, building AI training pipelines for swine wellness research.',
+                      'Evaluated state of the art pose detection models trained on homogeneous and heterogeneous swine datasets to measure their impact on keypoint detection accuracy in real world farm environments.',
+                      'Developed a web based application using React and Uvicorn to detect swine wellness through fecal matter classification.'
         ],
         
     },
     {
         title: 'UIUC College of Applied Health Sciences',
         time:'Jan 2025 - May 2025',
-        role:'Robotics Machine Learning Engineer Intern',
-        description: ['Optimized multimodal deep learning pipeline for STRETCH Robot AI, enabling compatibility with low-end GPUs by reducing VRAM usage from 12GB to 7GB .',
-            'Improved the reliability and safety of elderly-assistive object pick-and-place tasks, doubling the pickup success rate from 20% to 40%.'
+        role:'Robotics Perception Engineer, Intern',
+        description: ['Optimized multimodal deep learning ROS2 pipeline for STRETCH Robot AI, enabling compatibility with low end GPUs by reducing VRAM usage from 12GB to 7GB.',
+                      'Improved the reliability and safety of elderly assistive object pick and place tasks, doubling the pickup success rate from 20% to 40%.'
         ],
         
     },
@@ -164,16 +169,17 @@ export const timeData = [
         time:'Aug 2024 - Present',
         role:'M.Eng, Autonomy and Robotics',
         description: ['My course work includes working with mobile robotics and autonomous vehicles, currently focusing on developing my skill set on optimizing deep learning perception models and real time systems coordination.',
-            'Related Course Work: Autonomous Vehicle System Engineering, Deep Learning with Computer Vision, Principles of Safe Autonomy'
+            'Related Course Work: Autonomous Vehicle System Engineering, Deep Learning with Computer Vision, Computer Vision, Principles of Safe Autonomy'
         ],
         
     },
     {
         title: 'Accenture',
         time:'Aug 2021 - Jul 2024',
-        role:'Automation Engineer',
-        description: ['Implemented CI/CD pipelines for provisioning and managing Docker Containers, Azure Cloud and BareMetal servers, reducing manual setup and maintenance effort by up to 60%.',
-            'Evaluated cognitive vision models on IoT edge servers to assess their accuracy in detecting and reporting faulty surveillance cameras at Microsoft data centers.'
+        role:'Automation Engineer, Fulltime',
+        description: ['Designed an automated system to monitor and maintain Honeywell Lenel S2 security systems deployed in Microsoft Datacenters globally, ensuring badge readers, CCTV cameras, and security applications operated reliably, and triggering alerts when an edge device fails.',
+                      'Evaluated performance of cognitive vision models by assessing accuracy in detecting and reporting faulty surveillance cameras across Microsoft data centers.',
+                      'Developed Azure CI/CD pipelines to provision, configure, and manage Docker containers, Azure virtual machines, and BareMetal servers, reducing manual setup and maintenance effort by 60%.'
         ],
         
     },
@@ -181,7 +187,8 @@ export const timeData = [
         title: 'Nokia',
         time:'Feb 2021 - May 2021',
         role:'Embedded System Engineer, Intern',
-        description: ['Developed an IoT device to detect obstacles blocking accessibility of fire extinguishers and alert security in realtime for Nokia’s Manufacturing Factory as part of their safety measures.',
+        description: ['Developed an IoT device to detect obstacles blocking access to fire extinguishers and alert security in real time for 5G Radio Chip Manufacturing Factory.',
+                      'Built a Python Flask backend with SQL database to communicate with ESP32 microcontroller to continuously update sensor data and transmit real time status updates to the security system.'
         ],
         
     },
