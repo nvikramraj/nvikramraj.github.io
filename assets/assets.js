@@ -130,11 +130,11 @@ export const workData = [
 export const timeData = [
     {
         title: 'Premier Cooperative Inc',
-        time:'Aug 2025 - Present',
+        time:'Aug 2025 - May 2026',
         role:'Founding Robotics Engineer, Contract',
         description: ['Designed a low cost solution to digitally override a joystick control box of a grain probe using a custom PCB, ESP32 microcontroller and NVIDIA Jetson enabling automation of grain sample collection from a truck.',
                       'Developed and containerized a ROS 2 pipeline using Docker that detects incoming grain trucks using YOLO, builds a spatial map using Intel Depth Sense camera and controls the grain probe to take grain samples every 45 seconds.',
-                      'Building a web based control interface using React, FastAPI and Uvicorn to configure the system, calibrate cameras, override operations, and start/stop the robotic pipeline.'
+                      'Developed a .NET 8 WPF application for configuring, calibrating, and controlling a ROS 2 based robotic pipeline, including real-time camera stream visualization and an intuitive user interface for system operation.'
         ],
     },
     {
@@ -166,7 +166,7 @@ export const timeData = [
     },
     {
         title: 'University Of Illiois Urbana-Champaign',
-        time:'Aug 2024 - Present',
+        time:'Aug 2024 - May 2026',
         role:'M.Eng, Autonomy and Robotics',
         description: ['My course work includes working with mobile robotics and autonomous vehicles, currently focusing on developing my skill set on optimizing deep learning perception models and real time systems coordination.',
             'Related Course Work: Autonomous Vehicle System Engineering, Deep Learning with Computer Vision, Computer Vision, Principles of Safe Autonomy'
